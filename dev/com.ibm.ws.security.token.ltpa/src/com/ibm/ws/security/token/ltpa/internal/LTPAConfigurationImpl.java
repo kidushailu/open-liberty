@@ -220,6 +220,7 @@ public class LTPAConfigurationImpl implements LTPAConfiguration, FileBasedAction
             inactivityTimeout = (inactivityTimeoutValue != null) ? inactivityTimeoutValue : 0L;
 
             Boolean dynamicExpirationValidationValue = (Boolean) props.get(CFG_KEY_DYNAMIC_EXPIRATION_VALIDATION);
+            dynamicExpirationValidation = (dynamicExpirationValidationValue != null) ? dynamicExpirationValidationValue : false;
 
             if (TraceComponent.isAnyTracingEnabled() && tc.isDebugEnabled()) {
                 Tr.debug(tc, "refreshThreshold: " + refreshThreshold + " minutes");
